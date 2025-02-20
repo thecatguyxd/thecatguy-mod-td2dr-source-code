@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_genocide_city_chase",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":440.064,
+  "name":"mus_genocide_city_chase",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_genocide_city_chase.mp3",
+  "type":0,
+  "volume":1.0,
+}

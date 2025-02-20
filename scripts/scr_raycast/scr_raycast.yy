@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_raycast",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_raycast",
+  "parent":{
+    "name":"Helpers",
+    "path":"folders/Scripts/Helpers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
