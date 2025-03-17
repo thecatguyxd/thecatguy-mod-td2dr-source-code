@@ -1,5 +1,4 @@
 #macro BUILD_VER 1101
-#macro BUILD_DATE
 
 // Client stuff
 isConnected = false;
@@ -34,6 +33,7 @@ avCharacters =
 [ 
 	false, //0 (exe) (cannot)
 	true,  //1 (tails)
+	true,
 	true,
 	true,
 	true,

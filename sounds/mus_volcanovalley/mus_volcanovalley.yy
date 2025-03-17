@@ -12,8 +12,8 @@
   "duration":154.80164,
   "name":"mus_volcanovalley",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"levels",
+    "path":"folders/Sounds/Music/levels.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

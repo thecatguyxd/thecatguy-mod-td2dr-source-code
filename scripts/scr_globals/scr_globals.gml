@@ -9,11 +9,21 @@ global.paused = false;
 global.errorCode = -1;
 global.muteChat = false;
 //custom things
-global.enablecheats = false;
+/*
+global.debugtools = false;
 global.streamermode = false;
 global.clockformat = false;
 global.oldjump = false;
 global.anticamping = true;
+*/
+//пиздец
+global.fadealpha = 0;
+global.fadespeed = 0.02;
+global.cooldowntime = 0;
+global.transitionstarted = false;
+global.showsprite = false;
+global.skipfade = false;
+global.soundplayed = false;
 
 global.ringId = 0;
 global.ringFrame = 0;

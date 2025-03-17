@@ -12,8 +12,8 @@
   "duration":91.42857,
   "name":"mus_hill_chase",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"chase",
+    "path":"folders/Sounds/Music/levels/chase.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

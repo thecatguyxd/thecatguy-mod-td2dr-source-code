@@ -12,8 +12,8 @@
   "duration":145.73714,
   "name":"mus_limpcity",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"levels",
+    "path":"folders/Sounds/Music/levels.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

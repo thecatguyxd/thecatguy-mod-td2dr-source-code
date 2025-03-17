@@ -19,21 +19,26 @@ drawPing = function(char, exeCharacter, ping, revival, name, index)
 {	
 	if(char == CHARACTER_EXE)
 	{
-		char += CHARACTER_SALLY;
+		char += CHARACTER_SCARF;
 		char += exeCharacter;
 	}
 	else char--;
-	
-	draw_sprite(spr_tab_entry, char, 480/2, 44 + index * 30);
-	
-	if(char <= CHARACTER_SALLY)
+
+	var base_x = 120;
+	if (index % 2 == 1) base_x = 360;
+
+	var y_pos = 44 + (index div 2) * 30;
+
+	draw_sprite(spr_tab_entry, char, base_x, y_pos);
+
+	if(char <= CHARACTER_SCARF)
 	{
 		if(revival >= 2)
-			draw_sprite(spr_playerhealth_demon, char, 480/2-113 + 1, 43 + index * 30 + 28);
+			draw_sprite(spr_playerhealth_demon, char, base_x - 112, y_pos + 27);
 		else if(revival >= 1)
-			draw_sprite(spr_playerhealth_hit, char, 480/2-113 + 1, 43 + index * 30 + 28);
+			draw_sprite(spr_playerhealth_hit, char, base_x - 112, y_pos + 27);
 	}
-	
+
 	var clr = #0fff39;
 	if(ping <= 0)
 	{
@@ -46,10 +51,10 @@ drawPing = function(char, exeCharacter, ping, revival, name, index)
 			clr = #ffc400;
 		else if(ping >= 160)
 			clr = #ff0001;
-			
-		ping = $"{ping}ms"
-	
+
+		ping = $"{ping}ms";
 	}
-	scr_text_spr(127+59, 44+11 + index * 30, name, c_white);
-	scr_text_spr(127+183, 44+11 + index * 30, $"{ping}", clr);
+
+	scr_text_spr(base_x + -60, y_pos + 11, name, c_white);
+	scr_text_spr(base_x + 70, y_pos + 11, ping, clr);
 }

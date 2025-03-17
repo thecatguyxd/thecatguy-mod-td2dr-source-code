@@ -12,8 +12,8 @@
   "duration":96.79867,
   "name":"mus_torturecave_chase",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"chase",
+    "path":"folders/Sounds/Music/levels/chase.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -10,18 +10,7 @@ function scr_sally_special()
 			
 		isAttacking = false;
 	}
-	
-	if(isHiding)
-	{
-		if(attackTimer <= -60 * 2)
-			attackTimer = -60 * 2;
-			
-		if(shieldRechrage <= -60 * 2)
-			shieldRechrage = -60 * 2;
-			
-		isAttacking = false;
-	}
-	
+
 	if(global.playerControls && keyboard_check_pressed(global.KeyB) && !isGrounded && attackTimer <= 0)
 	{
 		audio_play_sound(snd_dash, 0, false);

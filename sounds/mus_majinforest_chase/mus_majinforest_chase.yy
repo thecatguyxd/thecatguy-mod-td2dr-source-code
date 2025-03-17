@@ -12,8 +12,8 @@
   "duration":181.05469,
   "name":"mus_majinforest_chase",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"chase",
+    "path":"folders/Sounds/Music/levels/chase.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

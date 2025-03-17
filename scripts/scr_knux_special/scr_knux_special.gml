@@ -11,17 +11,6 @@ function scr_knux_special()
 		isAttacking = false;
 	}
 	
-	if(isHiding)
-	{
-		if(attackTimer <= -60 * 2)
-			attackTimer = -60 * 2;
-		
-		if(glideTimer <= -60 * 2)
-			glideTimer = -60 * 2;
-			
-		isAttacking = false;
-	}
-	
 	if(global.playerControls && keyboard_check_pressed(global.KeyA) && !isGrounded && !isGliding && glideTimer <= 0)
 	{
 		isAttacking = false;
@@ -30,6 +19,12 @@ function scr_knux_special()
 		isGliding = true;
 		glideTimer = KNUX_GLIDE_RECHARGE;
 		glide_xspd = image_xscale * 5;
+	}
+	
+	// back in spining state
+	if (global.playerControls && keyboard_check_pressed(global.KeyDown))
+	{
+		isJumping = true;
 	}
 	
 	if(global.playerControls && keyboard_check_pressed(global.KeyB) && attackTimer <= 0)
@@ -44,12 +39,6 @@ function scr_knux_special()
 		isAttacking = true;
 		audio_play_sound(snd_dash, 0, false);
 		net_sound_emit(snd_dash);
-	}
-	
-	// back in spining state
-	if (global.playerControls && keyboard_check_pressed(global.KeyDown))
-	{
-		isJumping = true;
 	}
 	
 	if(isAttacking)

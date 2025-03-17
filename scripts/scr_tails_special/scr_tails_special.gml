@@ -1,4 +1,4 @@
-function scr_tails_special() //gml_Script_scr_tails_special
+function scr_tails_special()
 {
     if (redRingTimer > 0)
     {
@@ -7,14 +7,7 @@ function scr_tails_special() //gml_Script_scr_tails_special
         if (flyTimer <= -420 + 2)
             flyTimer = -420 + 2
     }
-    if isHiding
-    {
-        if (attackTimer <= -120)
-            attackTimer = -120
-        if (flyTimer <= -540)
-            flyTimer = -540
-    }
-	
+
     if (global.playerControls && (!isGrounded) && keyboard_check_pressed(global.KeyA) && attackCharge <= 0 && attackAfter <= 0)
     {
         if ((!isFlying) && flyTimer <= -420)
@@ -45,7 +38,6 @@ function scr_tails_special() //gml_Script_scr_tails_special
         yspd = 0
     }
 	
-	// back in spining state
 	if (global.playerControls && keyboard_check_pressed(global.KeyDown))
 	{
 		isJumping = true;

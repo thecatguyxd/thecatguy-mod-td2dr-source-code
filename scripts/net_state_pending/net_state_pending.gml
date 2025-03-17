@@ -43,6 +43,7 @@ function net_state_pending(rbuff, nps, isPasstrough)
 			{
 				with(obj_menu_waiting)
 				{
+					/*
 					draw_clock = true;
 					time_minutes = ceil((_timer+1) / 3600) - 1;
 					time_seconds = ceil(_timer /  60) %  60;
@@ -50,6 +51,7 @@ function net_state_pending(rbuff, nps, isPasstrough)
 					
 					if(time_minutes == 0 && time_seconds <= 10)
 						audio_play_sound(snd_clock, 1, false);
+					*/
 				}
 			}
 			break;

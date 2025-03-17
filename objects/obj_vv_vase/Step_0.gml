@@ -17,7 +17,7 @@ if(place_meeting(x, y, global.player))
 	var ch = global.character;
 	var isAttacking = false;
 	
-	if(global.player.isAttacking && (ch == CHARACTER_AMY || ch == CHARACTER_KNUX || ch == CHARACTER_EGGMAN || ch == CHARACTER_SALLY))
+	if(global.player.isAttacking && (ch == CHARACTER_AMY || ch == CHARACTER_KNUX || ch == CHARACTER_EGGMAN || ch == CHARACTER_SALLY || ch == CHARACTER_SCARF))
 		isAttacking = true;	
 		
 	if(ch == CHARACTER_AMY && global.player.state == AMY_HJUMP)

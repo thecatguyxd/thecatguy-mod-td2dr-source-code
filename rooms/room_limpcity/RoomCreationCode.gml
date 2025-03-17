@@ -1,5 +1,8 @@
 //Level setup code
-scr_play_music(mus_limpcity);
+var music_list = [mus_limpcity, mus_limpcity_2];
+var random_music = music_list[irandom(array_length_1d(music_list) - 1)];
+
+scr_play_music(random_music);
 
 global.parallax = [
 	[ layer_get_id("Background1"), 1, 1, 0 ],

@@ -8,3 +8,4 @@ global.parallax = [
 ];
 
 scr_level_split(spr_majong_tiles, 200);
+scr_level_splitl(spr_majong_other, "TilesFore");

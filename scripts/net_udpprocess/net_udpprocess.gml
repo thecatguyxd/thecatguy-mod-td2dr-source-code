@@ -118,7 +118,7 @@ function net_udpprocess(rbuff)
 								obj_puppet_tail.image_angle = buffer_read_s(rbuff, buffer_s16);
 						}
 						
-						if(character == CHARACTER_KNUX || character == CHARACTER_EGGMAN || character == CHARACTER_AMY || character == CHARACTER_SALLY)
+						if(character == CHARACTER_KNUX || character == CHARACTER_EGGMAN || character == CHARACTER_AMY || character == CHARACTER_SALLY || character == CHARACTER_SCARF)
 							isAttacking = bitflags & PLAYER_ATTACKING;
 							
 						isHurt = bitflags & PLAYER_HURT;

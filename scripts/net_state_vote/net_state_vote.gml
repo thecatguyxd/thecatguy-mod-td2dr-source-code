@@ -14,7 +14,6 @@ function net_state_vote(rbuff, nps, isPasstrough)
 			layer_set_visible(layer_get_id("Mercoin1"), false);
 			layer_set_visible(layer_get_id("Mercoin2"), false);
 			
-			instance_create_depth(0, 0, -100, obj_lobby_white);
 			obj_lobby_waiting.visible = false;
 			
 			with(obj_lobby)

@@ -1,1 +1,1 @@
-version = "game build: v&" + string(BUILD_VER) + "\n~mod build: v/0.6";
+version = "game build: v&" + string(BUILD_VER) + "\n~mod build: v/1.0";

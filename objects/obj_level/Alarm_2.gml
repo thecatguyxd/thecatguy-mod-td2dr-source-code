@@ -18,6 +18,7 @@ with(obj_netclient)
 		true,
 		true,
 		true,
+		true,
 		true
 	];
 	

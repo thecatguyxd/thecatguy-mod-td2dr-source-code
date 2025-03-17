@@ -17,7 +17,7 @@ if(instance_exists(obj_bigring) && !bigrig)
 	var background = layer_background_get_id(layer_get_id("Colour"));
 	layer_background_blend(background, c_black);
 	
-	instance_create_depth(0, 0, -1002, obj_np_white);
+	//instance_create_depth(0, 0, -1002, obj_np_white);
 }
 
 xx = obj_camera.x;

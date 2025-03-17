@@ -12,8 +12,8 @@
   "duration":74.23544,
   "name":"mus_notperfect_chase",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"chase",
+    "path":"folders/Sounds/Music/levels/chase.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

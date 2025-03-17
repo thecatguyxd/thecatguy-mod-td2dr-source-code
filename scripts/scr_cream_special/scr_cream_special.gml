@@ -13,21 +13,7 @@ function scr_cream_special()
 			
 		ringsSpawn = 0;
 	}
-	
-	if(isHiding)
-	{
-		if(flyTimer <= -60 * 2)
-			flyTimer = -60 * 2;
-		
-		if(dashTimer <= -60 * 2)
-			dashTimer = -60 * 2;
-			
-		if(ringsTimer <= -60 * 2)
-			ringsTimer = -60 * 2;
-			
-		ringsSpawn = 0;
-	}
-	
+
 	if(global.playerControls && isJumping && !justJumped && keyboard_check_pressed(global.KeyA) && flyTimer <= 0)
 	{
 		flyTimeout = 0;

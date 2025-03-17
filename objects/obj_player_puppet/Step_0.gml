@@ -63,7 +63,7 @@ if(place_meeting(x, y, global.player))
 			
 			if(character != CHARACTER_AMY && character != CHARACTER_EGGMAN)
 			{
-				if((global.character == CHARACTER_KNUX || global.character == CHARACTER_SALLY) && global.player.isAttacking && global.player.revivalTimes < 2)
+				if((global.character == CHARACTER_KNUX || global.character == CHARACTER_SALLY || global.character == CHARACTER_SCARF) && global.player.isAttacking && global.player.revivalTimes < 2)
 				{
 					global.player.isAttacking = false;
 					global.player.isHurt = true;
@@ -147,7 +147,7 @@ if(place_meeting(x, y, global.player))
 				}
 				
 				scr_player_hurt(damage, image_xscale * 3, -3, snd_hurt, spr_blood3);
-				
+
 				if(character == CHARACTER_EXE)
 				{
 					if(exeCharacter == EXE_CHAOS && sprite_index == spr_chaos_attack2)
@@ -205,7 +205,7 @@ if(place_meeting(x, y, global.player))
 			
 			if(global.character != CHARACTER_AMY && global.character != CHARACTER_EGGMAN)
 			{
-				if(global.player.isAttacking && (character == CHARACTER_KNUX || character == CHARACTER_SALLY))
+				if(global.player.isAttacking && (character == CHARACTER_KNUX || character == CHARACTER_SALLY || character == CHARACTER_SCARF))
 				{
 					global.player.isAttacking = false;
 					global.player.isHurt = true;
@@ -250,6 +250,26 @@ if(place_meeting(x, y, global.player))
 					snd = snd_electroshock;
 					xxspd = 0;
 				}
+				
+				if (character == CHARACTER_SCARF)
+                {
+                    stunTime = 3
+                    snd = snd_exe_stun
+                    xxspd = (-(sign(x - global.player.x))) * 2
+                }
+                buffer = cpacket_tcp((107 << 0), true)
+                buffer_write(buffer, buffer_u16, master_id)
+                buffer_write(buffer, buffer_u16, x)
+                buffer_write(buffer, buffer_u16, y)
+                buffer_write(buffer, buffer_u16, stunTime)
+                send_server_tcp(buffer)
+                if (character == CHARACTER_KNUX && sprite_index == spr_knux_attack2)
+                {
+                    pak = cpacket_tcp((88 << 0), true)
+                    buffer_write(pak, buffer_u16, master_id)
+                    buffer_write(pak, buffer_u8, 9)
+                    send_server_tcp(pak)
+                }
 				
 				var buffer = cpacket_tcp(PacketType.CLIENT_PLAYER_HURT, true);
 				buffer_write(buffer, buffer_u16, master_id);

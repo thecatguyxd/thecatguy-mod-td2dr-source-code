@@ -12,8 +12,8 @@
   "duration":15.333878,
   "name":"mus_exewin",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"results",
+    "path":"folders/Sounds/Music/results.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

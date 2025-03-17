@@ -12,8 +12,8 @@
   "duration":54.90939,
   "name":"mus_kindandfair",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"levels",
+    "path":"folders/Sounds/Music/levels.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -1,1 +1,0 @@
-canStuck = true;

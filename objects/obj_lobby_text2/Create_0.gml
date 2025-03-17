@@ -1,0 +1,1 @@
+text = $"№z~-ready" + $"\n№{vk_left}~-leave" + $"\n№enter~-open chat";

@@ -58,6 +58,13 @@ function scr_move_basic()
 			ringsSpawn = 0;
 		}
 		
+		if (global.character == CHARACTER_SCARF)
+        {
+            isAttacking = false
+            isSpindashing = false
+            spinCharging = 0
+        }
+		
 		gspd -= min(abs(gspd), acc) * sign(gspd); 
 		xspd -= min(abs(xspd), acc) * sign(xspd);
 		xspd -= 0.225 * sin(angle);
@@ -574,7 +581,7 @@ function scr_move_basic()
                 xspd -= (d / 256)
             }
         }
-		if (global.oldjump == false)
+		if (obj_custom.oldjump == false)
         {
             if (global.playerControls && keyboard_check_released(global.KeyA) && isJumping && yspd < 0)
                 yspd *= 0.6
@@ -589,55 +596,89 @@ function scr_move_basic()
         }
         if (global.character == CHARACTER_CREAM && ringsSpawn > 0)
             return;
-        audio_play_sound(snd_jump, 0, false)
-        net_sound_emit(snd_jump)
-        isGrounded = false
-        isSpinning = false
-        isJumping = true
-        justJumped = true
-        image_index = 0
-        xspd -= (jumpForce * sin(angle))
-        yspd = (-jumpForce) * cos(angle)
-    }
-	
-	//drowning хуйня полная если честно
-	if (global.player.isDead || global.player.revivalTimes >= 2 || global.character == CHARACTER_EXE)
-    {
-    }
-	else
+
+	    audio_play_sound(snd_jump, 0, false);
+	    net_sound_emit(snd_jump);
+	    isGrounded = false;
+	    isSpinning = false;
+	    isJumping = true;
+	    justJumped = true;
+	    image_index = 0;
+	    xspd -= (jumpForce * sin(angle));
+	    yspd = (-jumpForce) * cos(angle);
+	}
+
+//drowning хуйня полная если честно
+var playerstate = 0;
+
+if (global.player.revivalTimes >= 2) playerstate = 1;
+if (global.character == CHARACTER_EXE) playerstate = 2;
+{
+	switch (playerstate)
 	{
-		if (place_meeting(x, y-5, obj_ghz_water))
-		{
-		    drowning_timer += 1;
-		    ding_timer += 1;
+		case 1:
+		case 2:
+		    break;
 
-		    if (ding_timer >= room_speed * 6 && drowning_timer < room_speed * 20)
+		default:
+			if (place_meeting(x, y-20, obj_ghz_water))
 			{
-		        audio_play_sound(snd_ding, 1, false);
-		        ding_timer = 0;
-		    }
+				drowning_timer += 1;
+				ding_timer += 1;
 
-		    if (drowning_timer == room_speed * 20)
-			{
-		        audio_sound_gain(global.music, 0, 0);
-		        audio_play_sound(mus_drowning, 1, false);
-		    }
+				if (ding_timer >= room_speed * 6 && drowning_timer < room_speed * 20)
+				{
+				    audio_play_sound(snd_ding, 1, false);
+				    ding_timer = 0;
+				}
 
-		    if (drowning_timer >= room_speed * 31.5)
+				if (drowning_timer == room_speed * 20)
 			{
-				scr_player_instakill();
+			    if (instance_exists(obj_custom) && obj_custom.music_instance != -1) {
+					audio_sound_gain(obj_custom.music_instance, 1, 500);
+				}
+
+			    var rnd = irandom(6);
+
+			    switch (rnd)
+			    {
+			        case 0:
+			        case 1:
+			        case 2:
+			            audio_play_sound(mus_drowning2, 1, false);
+			        break;
+            
+			        case 3:
+			        case 4:
+			        case 5:
+			            audio_play_sound(mus_drowning3, 1, false);
+			        break;
+
+			        default:
+			            audio_play_sound(mus_drowning, 1, false);
+			        break;
+			    }
+			}
+
+				if (drowning_timer >= room_speed * 31.5)
+				{
+					scr_player_instakill();
+					drowning_timer = 0;
+					ding_timer = 0;
+				}
+			}
+			else
+			{
+				if (instance_exists(obj_custom) && obj_custom.music_instance != -1) {
+					audio_sound_gain(obj_custom.music_instance, 1, 500);
+				}
+				audio_stop_sound(mus_drowning);
+				audio_stop_sound(mus_drowning2);
+				audio_stop_sound(mus_drowning3);
+				isdead = true
 				drowning_timer = 0;
 				ding_timer = 0;
-		    }
-		}
-		else
-		{
-			audio_sound_gain(global.music, 1, 500);
-			audio_stop_sound(mus_drowning);
-			isdead = true
-		    drowning_timer = 0;
-		    ding_timer = 0;
+			}
 		}
 	}
 }
-

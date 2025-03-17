@@ -1,0 +1,1 @@
+text = "stats:" + "\n@survwins~" + "\n\\exewins~" + "\n\\exekills~" + "\ntotalwins";

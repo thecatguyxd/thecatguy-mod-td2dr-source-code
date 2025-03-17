@@ -17,6 +17,7 @@ global.parallax = [
 
 scr_level_splitl(spr_aiz_tiles, "Tiles");
 scr_level_splitl(spr_aiz_tiles2, "TilesFore");
+scr_level_splitl(spr_aiz_tiles3, "TilesFore");
 
 if(os_type == os_android)
 {

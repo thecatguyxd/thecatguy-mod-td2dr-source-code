@@ -1,6 +1,6 @@
-if(global.anticamping)
+if(obj_custom.anticamping)
 {
-		if(global.timeMinutes < 1)
+		if(obj_level.state = 1)
 			moved = true;
 		
 		if(global.player.isHiding)

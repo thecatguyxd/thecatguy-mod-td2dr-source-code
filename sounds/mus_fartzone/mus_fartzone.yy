@@ -12,8 +12,8 @@
   "duration":128.26935,
   "name":"mus_fartzone",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"levels",
+    "path":"folders/Sounds/Music/levels.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

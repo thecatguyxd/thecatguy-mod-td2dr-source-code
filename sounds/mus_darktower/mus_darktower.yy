@@ -12,8 +12,8 @@
   "duration":354.685,
   "name":"mus_darktower",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"levels",
+    "path":"folders/Sounds/Music/levels.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

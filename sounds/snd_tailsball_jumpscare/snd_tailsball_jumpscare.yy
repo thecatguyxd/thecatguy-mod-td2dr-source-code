@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_tailsball_jumpscare.ogg",
   "type":0,
-  "volume":0.5,
+  "volume":0.3,
 }

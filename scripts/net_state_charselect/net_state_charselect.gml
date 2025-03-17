@@ -89,9 +89,9 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 				
 				var table = obj_unlockables.palettes[? global.character];
 				
-				global.palleteFrom = table.from;
-				global.palleteTo = table.to;
-				global.palleteName = table.name;
+				//global.palleteFrom = table.from;
+				//global.palleteTo = table.to;
+				//global.palleteName = table.name;
 				
 				audio_play_sound(snd_clock, 0, false);
 			}
@@ -149,9 +149,9 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 			
 			var table = obj_unlockables.palettes[? global.exeCharacter + PALETTE_EXE];
 			
-			global.palleteFrom = table.from;
-			global.palleteTo = table.to;
-			global.palleteName = table.name;
+			//global.palleteFrom = table.from;
+			//global.palleteTo = table.to;
+			//global.palleteName = table.name;
 			
 			audio_play_sound(snd_clock, 0, false);
 			break;

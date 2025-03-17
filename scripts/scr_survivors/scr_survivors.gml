@@ -19,6 +19,7 @@
 #macro CHARACTER_AMY (CHARACTER_TAILS+3)
 #macro CHARACTER_CREAM (CHARACTER_TAILS+4)
 #macro CHARACTER_SALLY (CHARACTER_TAILS+5)
+#macro CHARACTER_SCARF (CHARACTER_TAILS+6)
 
 global.player_anims = ds_map_create();
 
@@ -42,7 +43,7 @@ global.player_anims[? CHARACTER_TAILS] =
 	spr_tails_fly, //14
 	spr_tails_attack1, //15
 	spr_tails_zipline, //16
-	spr_tails_tired, // custom animation 1
+	spr_tails_tired, // 17
 ];
 
 //Knux
@@ -158,10 +159,32 @@ global.player_anims[? CHARACTER_SALLY] =
 	spr_sally_zipline // 17
 ];
 
+//Scarf
+global.player_anims[? CHARACTER_SCARF] = 
+[
+	spr_scarf_idle, //0
+	spr_scarf_walk, //1
+	spr_scarf_run, //2
+	spr_scarf_jump, //3
+	spr_scarf_fall, //4
+	spr_scarf_hurt, //5
+	spr_scarf_dead, //6
+	spr_scarf_lookup, //7
+	spr_scarf_lookdown, //8
+	spr_scarf_emotion1, //9
+	spr_scarf_emotion2, //10
+	spr_scarf_emotion3, //11
+	spr_scarf_jump, //12
+	spr_scarf_balancing, //13
+	spr_scarf_attack2, //15
+	spr_scarf_attack1, //14
+	spr_scarf_zipline, //16
+	spr_scarf_spindash //17
+];
+
 global.player_eanims = ds_map_create();
 
 //Tails
-
 global.player_eanims[? CHARACTER_TAILS] = 
 [
 	spr_etails_idle, //0
@@ -296,6 +319,29 @@ global.player_eanims[? CHARACTER_SALLY] =
 	spr_esally_zipline // 17
 ];
 
+//Scarf
+global.player_eanims[? CHARACTER_SCARF] = 
+[
+	spr_escarf_idle, //0
+	spr_escarf_walk, //1
+	spr_escarf_run, //2
+	spr_escarf_jump, //3
+	spr_escarf_fall, //4
+	spr_escarf_hurt, //5
+	spr_escarf_dead, //6
+	spr_escarf_lookup, //7
+	spr_escarf_lookdown, //8
+	spr_escarf_emotion1, //9
+	spr_escarf_emotion2, //10
+	spr_escarf_emotion3, //11
+	spr_escarf_jump, //12
+	spr_escarf_balancing, //13
+	spr_escarf_attack2, //15
+	spr_escarf_attack1, //14
+	spr_escarf_zipline, //16
+	spr_escarf_spindash //17
+];
+
 function player_get(ind)
 {
 	switch(ind)
@@ -320,5 +366,8 @@ function player_get(ind)
 			
 		case CHARACTER_SALLY:
 			return obj_sally;
+			
+		case CHARACTER_SCARF:
+			return obj_scarf;
 	}
 }

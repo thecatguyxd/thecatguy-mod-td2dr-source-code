@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"room_hideandseek2",
-  "creationCodeFile":"${project_dir}/rooms/room_hideandseek2/RoomCreationCode.gml",
+  "creationCodeFile":"rooms/room_hideandseek2/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -142,6 +142,7 @@
     {"name":"inst_753B5165","path":"rooms/room_hideandseek2/room_hideandseek2.yy",},
     {"name":"inst_23C204ED","path":"rooms/room_hideandseek2/room_hideandseek2.yy",},
     {"name":"inst_78E1E67B","path":"rooms/room_hideandseek2/room_hideandseek2.yy",},
+    {"name":"inst_45ED01EA","path":"rooms/room_hideandseek2/room_hideandseek2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -282,6 +283,7 @@
         {"$GMRInstance":"v1","%Name":"inst_753B5165","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_753B5165","objectId":{"name":"obj_solid_block","path":"objects/obj_solid_block/obj_solid_block.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.4375,"scaleY":0.25,"x":4424.0,"y":608.0,},
         {"$GMRInstance":"v1","%Name":"inst_23C204ED","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_23C204ED","objectId":{"name":"obj_solid_block2","path":"objects/obj_solid_block2/obj_solid_block2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5625,"scaleY":13.0,"x":-72.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_78E1E67B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_78E1E67B","objectId":{"name":"obj_solid_block2","path":"objects/obj_solid_block2/obj_solid_block2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.375,"scaleY":12.999999,"x":4608.0,"y":0.0,},
+        {"$GMRInstance":"v1","%Name":"inst_45ED01EA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_45ED01EA","objectId":{"name":"obj_angleanuller_eggsafe","path":"objects/obj_angleanuller_eggsafe/obj_angleanuller_eggsafe.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2672.0,"y":1328.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background2","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background2","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"background_hn22","path":"sprites/background_hn22/background_hn22.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":16,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"background_hn2","path":"sprites/background_hn2/background_hn2.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},

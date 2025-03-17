@@ -1,17 +1,18 @@
+var str = "";
+for (var i = 0; i < array_length(chat); i++)
+    str += chat[i] + "\n";
+
+scr_text_spr(3, 148 - 6 + 40, str);
+
+var ind = chatMode;
+if (string_length(chatMsg) > 0)
+    ind = 1;
+
+draw_sprite(spr_lobby_chatbox, ind, 0, 211 + 40);
+scr_text_spr(2, 214 + 40, chatMsg);
+
 if(audio_is_playing(mus_waiting) || audio_is_playing(mus_minigame))
 {
-	var str = "";
-	for(var i = 0; i < array_length(chat); i++)
-		str += chat[i] + "\n";
-
-	scr_text_spr(3, 148-6+40, str);
-
-	var ind = chatMode;
-	if(string_length(chatMsg) > 0)
-		ind = 1;
-
-	draw_sprite(spr_lobby_chatbox, ind, 0, 211+40);
-	scr_text_spr(2, 214+40, chatMsg);
 }
 
 if(!obj_minigame.ingame)
@@ -80,14 +81,3 @@ if(voteKick)
 	draw_sprite(spr_lobby_votekick, (current_time / 300) % 4, 240, 8);
 	return;
 }
-
-if(!draw_clock)
-	return;
-
-draw_sprite(spr_clock, 0, 211, 0);
-clockAngle = lerp(clockAngle, (-45 * timeFrame), 0.2);
-draw_sprite_ext(spr_clockhand, 0, 212, 11.5, 1, 1, clockAngle, c_white, 1);
-
-draw_sprite(spr_counter, 10, 233, 4);
-scr_counter_draw(time_minutes, 224, 4);
-scr_counter_draw_m(time_seconds, 244, 4, 2);

@@ -12,8 +12,8 @@
   "duration":338.03876,
   "name":"mus_dotdotdot2",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"levels",
+    "path":"folders/Sounds/Music/levels.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

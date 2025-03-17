@@ -72,7 +72,7 @@ function net_tcpprocess(rbuff)
 				show_debug_message("client: " + string(_id) + " left.");
 				break;
 			}
-			
+
 			case PacketType.SERVER_PLAYER_FORCE_DISCONNECT:
 			{
 				if(_passtrough)
@@ -101,7 +101,7 @@ function net_tcpprocess(rbuff)
 				global.errorCode = 1;
 				room_goto(room_message);
 			}
-			
+
 			case PacketType.SERVER_LOBBY_COUNTDOWN:
 			{
 				if(_passtrough)
@@ -166,6 +166,7 @@ function net_tcpprocess(rbuff)
 				[ 
 					false, //0 (exe) (cannot)
 					true,  //1 (t)
+					true,
 					true,
 					true,
 					true,

@@ -1,3 +1,4 @@
+/*
 _timer++;
 
 if(!_fade && _timer > 60 * 10)

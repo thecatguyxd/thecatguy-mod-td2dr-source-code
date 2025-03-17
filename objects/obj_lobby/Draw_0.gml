@@ -125,7 +125,7 @@ else if(state == 2 || state == 3)
 		sprInd = selected - 1;
 		
 		if(obj_netclient.exeId == obj_netclient.nid)
-			sprInd += CHARACTER_SALLY;
+			sprInd += CHARACTER_SCARF;
 	}
 	
 	if(obj_netclient.exeId == obj_netclient.nid || obj_netclient.avCharacters[sprInd+1])

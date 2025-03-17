@@ -12,8 +12,8 @@
   "duration":94.014694,
   "name":"mus_nastyparadise_chase",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"chase",
+    "path":"folders/Sounds/Music/levels/chase.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

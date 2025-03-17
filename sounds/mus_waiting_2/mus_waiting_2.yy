@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_waiting_2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":147.768,
+  "name":"mus_waiting_2",
+  "parent":{
+    "name":"not in game",
+    "path":"folders/Sounds/Music/not in game.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_waiting_2.mp3",
+  "type":0,
+  "volume":0.5,
+}

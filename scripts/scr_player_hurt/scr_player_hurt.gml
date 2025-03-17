@@ -155,9 +155,20 @@ function scr_player_hurt(damage, xpw=4, ypw=-6, sndid=snd_hurt, blood=spr_blood1
 	global.player.xspd = xpw;
 	global.player.yspd = ypw;
 	
-	if(damage != 0)
-		global.player.hurttime = (global.timeMinutes <= 0 && global.timeSeconds <  60) ? 1 * 60 : 3 * 60;
+	if (damage != 0)
+	{
+	    switch (obj_level.state)
+		{
+	        case 0:
+	            global.player.hurttime = 3 * 60;
+	            break;
+	        case 1:
+	            global.player.hurttime = 1 * 60;
+	            break;
+	    }
+	}
 	else
-		global.player.hurttime = 0;
-	
+	{
+	    global.player.hurttime = 0;
+	}
 }

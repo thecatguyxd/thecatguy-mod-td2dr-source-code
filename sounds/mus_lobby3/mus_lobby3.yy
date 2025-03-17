@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_lobby3",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":73.536,
+  "name":"mus_lobby3",
+  "parent":{
+    "name":"lobby",
+    "path":"folders/Sounds/Music/lobby.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_lobby3.mp3",
+  "type":0,
+  "volume":0.5,
+}

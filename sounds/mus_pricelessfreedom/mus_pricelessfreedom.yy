@@ -12,8 +12,8 @@
   "duration":78.70694,
   "name":"mus_pricelessfreedom",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"levels",
+    "path":"folders/Sounds/Music/levels.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

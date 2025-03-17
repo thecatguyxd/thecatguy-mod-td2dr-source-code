@@ -51,6 +51,7 @@ function net_state_game(rbuff, nps, isPasstrough)
 {
 	switch(nps)
 	{
+
 		case PacketType.SERVER_FELLA:
 		{
 			var pid = buffer_read_s(rbuff, buffer_u16);
@@ -76,7 +77,7 @@ function net_state_game(rbuff, nps, isPasstrough)
 			
 			break;
 		}
-		
+
 		case PacketType.SERVER_PLAYER_ESCAPED:
 		{
 			if(!instance_exists(global.player))
@@ -925,7 +926,6 @@ function net_state_game(rbuff, nps, isPasstrough)
 			
 			if(_type == 0)
 			{
-				instance_create_depth(0, 0, 0, obj_flash);
 				audio_play_sound(snd_thunder, 0, false);
 				
 				obj_ghz_water.electro = true;
@@ -2237,12 +2237,12 @@ function net_state_game(rbuff, nps, isPasstrough)
 				break;
 				
 			obj_level.timeFrame++;
-			if(global.timeMinutes == 2 && global.timeSeconds == 1)
+			if(global.timeMinutes == 2 && global.timeSeconds == 0)
 				instance_create_depth(0, 0, 0, obj_suddendeath);
-				
+		/*
 			if(global.timeMinutes == 0 && global.timeSeconds <= 10)
 				audio_play_sound(snd_clock, 1, false);
-			
+		*/
 			break;
 		}
 		
@@ -2337,14 +2337,14 @@ function net_state_game(rbuff, nps, isPasstrough)
 					global.player.shieldRechrage = 0;	
 					break;
 			}
-			
+			/*
 			var table = obj_unlockables.palettes[? global.character + PALETTE_DEMON];
 			
 			global.palleteFrom = table.from;
 			global.palleteTo = table.to;
 			global.palleteName = table.name;
 			net_send_palette();
-			
+			*/
 			obj_achivements.alarm[1] = 60 * 5;
 			obj_achivements.demonLast = true;
 			
@@ -2419,8 +2419,10 @@ function net_state_game(rbuff, nps, isPasstrough)
 				}
 				else if(room == room_act9)
 				{
-					audio_sound_gain(mus_act9, 0, 1000);
-					audio_sound_gain(mus_act9_chase, 1, 1000);
+					
+					//audio_sound_gain(mus_act9, 0, 1000);
+					
+					scr_play_music(mus_act9_chase);
 				}
 				else
 					scr_play_music(global.levels[lvlId].chaseMusic);

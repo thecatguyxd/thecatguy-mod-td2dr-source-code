@@ -62,6 +62,9 @@ if(instance_exists(global.player) && global.player.hp > 0)
 		if(global.character == CHARACTER_SALLY && global.player.state == SALLY_ZIPLINE)
 			return;
 			
+		if(global.character == CHARACTER_SCARF && global.player.state == SCARF_ZIPLINE)
+			return;
+			
 		audio_play_sound(snd_snap, 0, false);
 		net_sound_emit(snd_snap);
 		hasPlayer = true;
@@ -125,6 +128,11 @@ if(hasPlayer && progress < 1)
 			
 		case CHARACTER_SALLY:
 			global.player.y = y + 18;
+			break;
+		
+		case CHARACTER_SCARF:
+			global.player.y = y + 8;
+			global.player.isFlying = false;
 			break;
 			
 	}

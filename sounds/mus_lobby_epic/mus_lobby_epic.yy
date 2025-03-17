@@ -12,8 +12,8 @@
   "duration":45.823265,
   "name":"mus_lobby_epic",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"lobby",
+    "path":"folders/Sounds/Music/lobby.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

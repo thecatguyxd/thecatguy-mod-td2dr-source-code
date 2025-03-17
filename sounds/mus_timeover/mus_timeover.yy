@@ -12,8 +12,8 @@
   "duration":14.576327,
   "name":"mus_timeover",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"results",
+    "path":"folders/Sounds/Music/results.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

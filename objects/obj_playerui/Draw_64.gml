@@ -15,7 +15,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 					if (prog != 1.0)
 					{
-					    scr_text_spr(50, 242, string(global.player.attackTimer / 70), text_color);
+					    scr_text_spr(50, 242, string_format(global.player.attackTimer / 70, 0, 2), text_color);
 					}
 					
 					//invis timer
@@ -26,12 +26,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.invisTimer = 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 256, string(global.player.invisTimer / 70), text_color);
+					        scr_text_spr(50, 256, string_format(global.player.invisTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.invisTimer > -1200)
 						{
 						    var text_color = prog == 1.0 ? c_white : c_red;
-						    scr_text_spr(50, 256, string(global.player.invisTimer / 70), text_color);
+						    scr_text_spr(50, 256, string_format(global.player.invisTimer / 70, 0, 2), text_color, 0.5);
 						}
 					
 					//other
@@ -54,7 +54,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 					if (prog != 1.0)
 					{
-					    scr_text_spr(60, 242, string(global.player.attackTimer / 70), text_color);
+					    scr_text_spr(60, 242, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 					}
 					
 					//slime Timer
@@ -63,10 +63,10 @@ if(instance_exists(global.player) && !global.player.isDead)
 					    var prog = global.player.slimeTimer > 0 ? 0 : 1.0 - (min(global.player.attackTimer, 120) / 120.0);
 					    draw_sprite_ext(spr_gui_chaosattack, !global.player.isGrounded, prog * 10, 240 - (os_type == os_android ? 200 : 0), 1, 1, 0, prog == 1.0 ? c_white : c_red, prog);
 
-					    if (global.player.slimeTimer = 0)
+					    if (global.player.slimeTimer = 0)			
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 260, string(global.player.slimeTimer / 70), text_color);
+					        scr_text_spr(50, 260, string_format(global.player.slimeTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					}
 					else
@@ -95,7 +95,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.slimeTimer > -1200)
 					{
 					    var text_color = prog == 1.0 ? c_white : c_red;
-					    scr_text_spr(50, 260, string(global.player.slimeTimer / 70), text_color);
+					    scr_text_spr(50, 260, string_format(global.player.slimeTimer / 70, 0, 2), text_color, 0.5);
 					}
 					
 					//other
@@ -134,7 +134,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 					if (prog != 1.0)
 					{
-					    scr_text_spr(55, 241, string(global.player.attackTimer / 70), text_color);
+					    scr_text_spr(55, 241, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 					}
 					
 					//black ring timer
@@ -144,7 +144,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 					if (prog != 1.0)
 					{
-					    scr_text_spr(50, 256, string(global.player.bringTimer / 70), text_color);
+					    scr_text_spr(50, 256, string_format(global.player.bringTimer / 70, 0, 2), text_color, 0.5);
 					}
 					
 					//other
@@ -167,7 +167,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 					if (prog != 1.0)
 					{
-					    scr_text_spr(50, 241, string(global.player.attackTimer / 70), text_color);
+					    scr_text_spr(50, 241, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 					}
 					
 					//exeller clone timer
@@ -194,7 +194,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 					if (prog != 1.0 && global.player.cloneCount < 2)
 					{
-					    scr_text_spr(70, 256, string(global.player.cloneTimer / 70), text_color);
+					    scr_text_spr(70, 256, string_format(global.player.cloneTimer / 70, 0, 2), text_color, 0.5);
 					}
 
 					
@@ -238,12 +238,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.flyTimer = 160)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 256, string(global.player.flyTimer / 70), text_color);
+					        scr_text_spr(50, 256, string_format(global.player.flyTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.flyTimer > -420)
 						{
 						    var text_color = prog == 1.0 ? c_white : c_red;
-						    scr_text_spr(50, 241, string(global.player.flyTimer / 70), text_color);
+						    scr_text_spr(50, 241, string_format(global.player.flyTimer / 70, 0, 2), text_color, 0.5);
 						}
 			
 			//attack timer
@@ -254,7 +254,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 			if (prog != 1.0)
 			{
-			    scr_text_spr(50, 256, string(global.player.attackTimer / 70), text_color);
+			    scr_text_spr(50, 256, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 			}
 
 			//other
@@ -278,12 +278,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.glideTimer = 899)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(55, 244, string(global.player.glideTimer / 70), text_color);
+					        scr_text_spr(55, 244, string_format(global.player.glideTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.glideTimer > 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(55, 244, string(global.player.glideTimer / 70), text_color);
+					        scr_text_spr(55, 244, string_format(global.player.glideTimer / 70, 0, 2), text_color, 0.5);
 					    }
 			
 			//attack timer
@@ -294,7 +294,7 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 			if (prog != 1.0)
 			{
-			    scr_text_spr(55, 260, string(global.player.attackTimer / 70), text_color);
+			    scr_text_spr(55, 260, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 			}
 			
 			//other
@@ -313,50 +313,50 @@ if(instance_exists(global.player) && !global.player.isDead)
 			//jetpack timer
 			var prog = 1.0 - (max(global.player.djumpRecharge, 0) / EGGMAN_DJUMP_RECHARGE);
 
-					var text_color = prog == 1.0 ? c_white : c_red;
+			var text_color = prog == 1.0 ? c_white : c_red;
 					
-					if (global.player.djumpRecharge > 600)
-						{
-					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 226, string(global.player.djumpRecharge / 70), text_color);
-					    }
-					if (global.player.djumpRecharge > 0)
-						{
-					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 226, string(global.player.djumpRecharge / 70), text_color);
-					    }
+			if (global.player.djumpRecharge > 600)
+				{
+					var text_color = prog == 1.0 ? c_white : c_red;
+					scr_text_spr(50, 226, string_format(global.player.djumpRecharge / 70, 0, 2), text_color, 0.5);
+				}
+			if (global.player.djumpRecharge > 0)
+				{
+					var text_color = prog == 1.0 ? c_white : c_red;
+					scr_text_spr(50, 226, string_format(global.player.djumpRecharge / 70, 0, 2), text_color, 0.5);
+				}
 			
 			//shield timer
 			var prog = 1.0 - (max(global.player.shieldRechrage, 0) / EGGMAN_SHIELD_RECHARGE);
 
-					var text_color = prog == 1.0 ? c_white : c_red;
+			var text_color = prog == 1.0 ? c_white : c_red;
 					
-					if (global.player.shieldRechrage > 1200)
-						{
-					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 242, string(global.player.shieldRechrage / 70), text_color);
-					    }
-					if (global.player.shieldRechrage > 0)
-						{
-					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 242, string(global.player.shieldRechrage / 70), text_color);
-					    }
+			if (global.player.shieldRechrage > 1200)
+				{
+					var text_color = prog == 1.0 ? c_white : c_red;
+					scr_text_spr(50, 242, string_format(global.player.shieldRechrage / 70, 0, 2), text_color, 0.5);
+				}
+			if (global.player.shieldRechrage > 0)
+				{
+					var text_color = prog == 1.0 ? c_white : c_red;
+					scr_text_spr(50, 242, string_format(global.player.shieldRechrage / 70, 0, 2), text_color, 0.5);
+				}
 			
 			//tracker timer
 			var prog = 1.0 - (max(global.player.trackerRecharge, 0) / EGGMAN_TRACKER_RECHARGE);
 
-					var text_color = prog == 1.0 ? c_white : c_red;
+			var text_color = prog == 1.0 ? c_white : c_red;
 					
-					if (global.player.trackerRecharge > 1800)
-						{
-					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(60, 256, string(global.player.trackerRecharge / 70), text_color);
-					    }
-					if (global.player.trackerRecharge > 0)
-						{
-					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(60, 256, string(global.player.trackerRecharge / 70), text_color);
-					    }
+			if (global.player.trackerRecharge > 1800)
+				{
+					var text_color = prog == 1.0 ? c_white : c_red;
+					scr_text_spr(60, 256, string_format(global.player.trackerRecharge / 70, 0, 2), text_color, 0.5);
+				}
+			if (global.player.trackerRecharge > 0)
+				{
+					var text_color = prog == 1.0 ? c_white : c_red;
+					scr_text_spr(60, 256, string_format(global.player.trackerRecharge / 70, 0, 2), text_color, 0.5);
+				}
 			
 			var prog = 1.0 - (max(global.player.djumpRecharge, 0) / EGGMAN_DJUMP_RECHARGE);
 			draw_sprite_ext(spr_gui_eggdjump, 0, prog * 10, 222 - (os_type == os_android ? 200 : 0), 1, 1, 0, prog == 1.0 ? c_white : c_red, prog);
@@ -378,12 +378,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.hjumpTimer > 540)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(55, 242, string(global.player.hjumpTimer / 70), text_color);
+					        scr_text_spr(55, 242, string_format(global.player.hjumpTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.hjumpTimer > 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(55, 242, string(global.player.hjumpTimer / 70), text_color);
+					        scr_text_spr(55, 242, string_format(global.player.hjumpTimer / 70, 0, 2), text_color, 0.5);
 					    }
 			
 			var val = global.player.revivalTimes >= 2 ? KNUX_EXEATTACK_RECHARGE : KNUX_ATTACK_RECHARGE;
@@ -394,12 +394,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.attackTimer > 1200)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(55, 260, string(global.player.attackTimer / 70), text_color);
+					        scr_text_spr(55, 260, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.attackTimer > 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(55, 260, string(global.player.attackTimer / 70), text_color);
+					        scr_text_spr(55, 260, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 					    }
 			
 			var prog = 1.0 - (max(global.player.hjumpTimer, 0) / AMY_BIGJUMP_RECHARGE);
@@ -418,15 +418,15 @@ if(instance_exists(global.player) && !global.player.isDead)
 
 					var text_color = prog == 1.0 ? c_white : c_red;
 					
-					if (global.player.flyTimer > 900)
+					if (global.player.flyTimer > 899)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 228, string(global.player.flyTimer / 70), text_color);
+					        scr_text_spr(50, 228, string_format(global.player.flyTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.flyTimer > 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 228, string(global.player.flyTimer / 70), text_color);
+					        scr_text_spr(50, 228, string_format(global.player.flyTimer / 70, 0, 2), text_color, 0.5);
 					    }
 			
 			var prog = 1.0 - (max(global.player.dashTimer, 0) / CREAM_DASH_RECHARGE);
@@ -436,12 +436,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.dashTimer > 1800)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 244, string(global.player.dashTimer / 70), text_color);
+					        scr_text_spr(50, 244, string_format(global.player.dashTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.dashTimer > 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 244, string(global.player.dashTimer / 70), text_color);
+					        scr_text_spr(50, 244, string_format(global.player.dashTimer / 70, 0, 2), text_color, 0.5);
 					    }
 			
 			var prog = 1.0 - (max(global.player.ringsTimer, 0) / (global.player.revivalTimes >= 2 ? ECREAM_RINGS_RECHARGE : CREAM_DASH_RECHARGE));
@@ -451,12 +451,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.ringsTimer > 2400)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 260, string(global.player.ringsTimer / 70), text_color);
+					        scr_text_spr(50, 260, string_format(global.player.ringsTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.ringsTimer > 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(50, 260, string(global.player.ringsTimer / 70), text_color);
+					        scr_text_spr(50, 260, string_format(global.player.ringsTimer / 70, 0, 2), text_color, 0.5);
 					    }
 			
 			var prog = 1.0 - (max(global.player.flyTimer, 0) / CREAM_FLY_RECHARGE);
@@ -481,12 +481,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.attackTimer > 900)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(45, 242, string(global.player.attackTimer / 70), text_color);
+					        scr_text_spr(45, 242, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.attackTimer > 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(45, 242, string(global.player.attackTimer / 70), text_color);
+					        scr_text_spr(45, 242, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
 					    }
 			
 			var val = global.player.revivalTimes >= 2 ? SALLY_ESHIELD_RECHARGE : SALLY_SHIELD_RECHARGE;
@@ -497,12 +497,12 @@ if(instance_exists(global.player) && !global.player.isDead)
 					if (global.player.shieldRechrage > 1800)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(45, 260, string(global.player.shieldRechrage / 70), text_color);
+					        scr_text_spr(45, 260, string_format(global.player.shieldRechrage / 70, 0, 2), text_color, 0.5);
 					    }
 					if (global.player.shieldRechrage > 0)
 						{
 					        var text_color = prog == 1.0 ? c_white : c_red;
-					        scr_text_spr(45, 260, string(global.player.shieldRechrage / 70), text_color);
+					        scr_text_spr(45, 260, string_format(global.player.shieldRechrage / 70, 0, 2), text_color, 0.5);
 					    }
 			
 			var val = global.player.revivalTimes >= 2 ? SALLY_EATTACK_RECHARGE : SALLY_ATTACK_RECHARGE;
@@ -522,9 +522,30 @@ if(instance_exists(global.player) && !global.player.isDead)
 			draw_sprite_ext(spr_gui_sallyshield, global.player.revivalTimes >= 2, prog * 10, 258 - (os_type == os_android ? 200 : 0), 1, 1, 0, prog == 1.0 ? c_white : c_red, prog);
 			break;
 		}
+		
+		case CHARACTER_SCARF:
+		{
+			
+		    var val = global.player.revivalTimes >= 2 ? SCARF_EXEATTACK_RECHARGE : SCARF_ATTACK_RECHARGE;
+			var prog = 1.0 - (min(global.player.attackTimer, val) / val);
+		    var text_color = prog == 1.0 ? c_white : c_red;
+
+		    if (prog != 1.0)
+		    {
+		        scr_text_spr(45, 243.5, string_format(global.player.attackTimer / 70, 0, 2), text_color, 0.5);
+		    }
+		    draw_sprite_ext(spr_gui_exeattack, 0, prog * 10, 242 - (os_type == os_android ? 200 : 0), 1, 1, 0, prog == 1.0 ? c_white : c_red, prog);
+			
+            val = (global.player.revivalTimes >= 2 ? 410 : 820)
+            prog = 1 - (max(global.player.spinCooldown, 0)) / val
+			if (global.player.spinCooldown > 0)
+			{
+				var text_color = prog == 1.0 ? c_white : c_red;
+				scr_text_spr(60, 257.5, string_format(global.player.spinCooldown / 70, 0, 2), text_color, 0.5);
+			}
+			
+            draw_sprite_ext(spr_gui_scarfspindash, global.player.revivalTimes >= 2, (prog * 10), 254, 1, 1, 0, (prog == 1 ? c_white : c_red), prog)
+            break;
+		}
 	}
-	
-	if(global.showHud)
-	if(global.character != CHARACTER_EXE && (global.player.state == IDLE || global.player.emotion))
-		draw_sprite(spr_gui_emotions, 0, 470, 222 - (os_type == os_android ? 200 : 0));
 }

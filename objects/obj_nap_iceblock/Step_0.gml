@@ -22,7 +22,7 @@ if(_inst != noone && _inst.isOwner)
 if(!instance_exists(global.player))
 	return;
 
-if(place_meeting(x, y, global.player) && global.character == CHARACTER_KNUX && global.player.state == KNUX_GLIDE)
+if(place_meeting(x, y, global.player) && global.character == CHARACTER_KNUX && global.player.state == KNUX_GLIDE || (global.character == CHARACTER_SCARF && global.player.justSpindashed == true))
 {
 	var pack = cpacket_tcp(PacketType.CLIENT_NAPICE_ACTIVATE);
 	buffer_write(pack, buffer_u8, nid);

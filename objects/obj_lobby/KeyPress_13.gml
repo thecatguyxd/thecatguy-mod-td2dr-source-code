@@ -38,25 +38,25 @@ else
 			break;
 			
 			//cheats :swag:
-			case ".cheats":
-			if (global.nickname == "the@cat&fish/" || global.nickname == "fox")
+			case ".debug":
+			if (global.nickname == "the@cat&fish\\")
 		
 				{
-					global.enablecheats = !global.enablecheats;
-					if (global.enablecheats)
-						lobby_add_message("/(client)", "@cheats enabled");
+					obj_custom.debugtools = !obj_custom.debugtools;
+					if (obj_custom.debugtools)
+						lobby_add_message("/(client)", "|debug mode @enabled");
 					else
-						lobby_add_message("/(client)", "\\cheats disabled");
+						lobby_add_message("/(client)", "|debug mode \\disabled");
 				}
-				break;
-				
+			break;
+			
 			//streamer mode
 			case ".streamer mode":
 			case ".sm":
 		
 				{
-					global.streamermode = !global.streamermode;
-					if (global.streamermode)
+					obj_custom.streamermode = !obj_custom.streamermode;
+					if (obj_custom.streamermode)
 						lobby_add_message("/(client)", "&streamer mode enabled");
 					else
 						lobby_add_message("/(client)", "&streamer mode disabled");
@@ -68,8 +68,8 @@ else
 			case ".cf":
 		
 				{
-					global.clockformat = !global.clockformat;
-					if (global.clockformat)
+					obj_custom.clockformat = !obj_custom.clockformat;
+					if (obj_custom.clockformat)
 						lobby_add_message("/(client)", "~clock format now 24 hours");
 					else
 						lobby_add_message("/(client)", "~clock format now 12 hours");
@@ -81,8 +81,8 @@ else
 			case ".cj":
 		
 				{
-					global.oldjump = !global.oldjump;
-					if (global.oldjump)
+					obj_custom.oldjump = !obj_custom.oldjump;
+					if (obj_custom.oldjump)
 						lobby_add_message("/(client)", "\\oldjump ~selected");
 					else
 						lobby_add_message("/(client)", "@newjump ~selected");
@@ -94,8 +94,8 @@ else
 			case ".ac":
 		
 				{
-					global.anticamping = !global.anticamping;
-					if (global.anticamping)
+					obj_custom.anticamping = !obj_custom.anticamping;
+					if (obj_custom.anticamping)
 						lobby_add_message("/(client)", "@anti camp ~enabled");
 					else
 						lobby_add_message("/(client)", "\\anti camp ~disabled");

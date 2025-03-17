@@ -1,0 +1,1 @@
+text = "" + $"\n{obj_achivements.survWins}" + $"\n{obj_achivements.exeWins}" + $"\n{obj_achivements.exeKills}" + $"\n{obj_achivements.survWins + obj_achivements.exeWins}";

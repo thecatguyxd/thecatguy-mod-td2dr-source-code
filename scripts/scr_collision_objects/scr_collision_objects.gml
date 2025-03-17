@@ -287,7 +287,7 @@ function scr_collision_objects_after()
 		var _isAttacking = false;
 		var ch = global.character;
 	
-		if(global.player.isAttacking && (ch == CHARACTER_EXE || ch == CHARACTER_AMY || ch == CHARACTER_KNUX || ch == CHARACTER_EGGMAN || ch == CHARACTER_SALLY))
+		if(global.player.isAttacking && (ch == CHARACTER_EXE || ch == CHARACTER_AMY || ch == CHARACTER_KNUX || ch == CHARACTER_EGGMAN || ch == CHARACTER_SALLY || ch == CHARACTER_SCARF))
 			_isAttacking = true;
 				
 		if(ch == CHARACTER_AMY && global.player.state == AMY_HJUMP)

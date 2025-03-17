@@ -109,7 +109,9 @@ global.net_snds =
 	
 	snd_tailsball_jumpscare2,
 	snd_roar,
-	snd_boohoo
+	snd_boohoo,
+	snd_spin_dash,
+	snd_spin_end
 ];
 global.tmp_sndid = 0;
 

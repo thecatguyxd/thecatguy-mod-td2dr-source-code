@@ -19,13 +19,13 @@ else if(keyboard_check(global.KeyDown))
 	
 if(keyboard_check(global.KeyLeft))
 {
-	xspd = -2;
-	x -= 2;
+	xspd = -3;
+	x -= 3;
 }
 else if(keyboard_check(global.KeyRight))
 {
-	xspd = 2;
-	x += 2;
+	xspd = 3;
+	x += 3;
 }
 else xspd = 0;
 

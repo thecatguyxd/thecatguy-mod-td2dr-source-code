@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_menu_slider",
-    "path":"sprites/spr_menu_slider/spr_menu_slider.yy",
+    "name":"spr_slider",
+    "path":"sprites/spr_slider/spr_slider.yy",
   },
   "spriteMaskId":null,
   "visible":true,

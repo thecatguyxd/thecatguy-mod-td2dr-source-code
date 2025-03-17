@@ -66,7 +66,7 @@ with(global.player)
 			if(redRingTimer > 0)
 				bitflags |= PLAYER_REDRING;
 		
-			if(global.character == CHARACTER_KNUX || global.character == CHARACTER_AMY || global.character == CHARACTER_SALLY || global.character == CHARACTER_EGGMAN)
+			if(global.character == CHARACTER_KNUX || global.character == CHARACTER_AMY || global.character == CHARACTER_SALLY || global.character == CHARACTER_EGGMAN || global.character == CHARACTER_SCARF)
 			{
 				if(isAttacking)
 					bitflags |= PLAYER_ATTACKING;

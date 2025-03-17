@@ -1,5 +1,8 @@
 //Level setup code
-scr_play_music(mus_notperfect);
+var music_list = [mus_notperfect, mus_notperfect_2];
+var random_music = music_list[irandom(array_length_1d(music_list) - 1)];
+
+scr_play_music(random_music);
 
 scr_level_splitl(spr_notperfect2, "ShadowTiles");
 scr_level_splitl(spr_notperfect, "Tiles");

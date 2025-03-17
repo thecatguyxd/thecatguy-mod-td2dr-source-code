@@ -12,8 +12,8 @@
   "duration":20.204062,
   "name":"mus_lobby",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"lobby",
+    "path":"folders/Sounds/Music/lobby.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

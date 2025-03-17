@@ -19,6 +19,7 @@ chars =
 	spr_menu_amy,
 	spr_menu_cream,
 	spr_menu_sally,
+	spr_menu_scarf,
 	spr_menu_exe,
 	spr_menu_chaos,
 	spr_menu_exetior,

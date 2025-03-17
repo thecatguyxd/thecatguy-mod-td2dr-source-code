@@ -571,7 +571,7 @@ buttonSelected = function(_bid, _bcolumn, _dir, _anim)
 		{
 			if(_bid == 1)
 			{
-				bColumnCount = 5;
+				bColumnCount = 6;
 			}
 			else if(_bid == 2)
 			{
@@ -774,15 +774,19 @@ buttonPressed = function(_bid, _bcolumn)
 						break;
 						
 					case 2:
-						net_join("185.114.73.206");
+						net_join("185.114.73.213");
 						break;
 						
 					case 3:
-						net_join("185.102.139.87");
+						net_join("185.112.101.94");
+						break;
+
+					case 4:
+						net_join("icestar.com.de");
 						break;
 						
-					case 4:
-						net_join("194.36.178.195");
+					case 5:
+						net_join("194.36.179.18");
 						break;
 				}
 			}

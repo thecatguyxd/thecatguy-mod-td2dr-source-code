@@ -94,43 +94,43 @@ function scr_text_spr(xx, yy, str, color=c_white, alpha=1)
 			case "%":
 				ind = 43;
 				break;
-				
+			
 			case "+":
 				ind = 77;
 				break;
 				
 			case "\\":
-				_col = #C20037;
+				_col = #ff0000;
 				continue;
 				break;
 				
 			case "@":
-				_col = #0fff39;
+				_col = #00ff00;
 				continue;
 				break;
 				
 			case "&":
-				_col = #b824ff;
+				_col = #7703fc;
 				continue;
 				break;
 				
 			case "/":
-				_col = #5D67FF;
+				_col = #0000FF;
 				continue;
 				break;
 				
 			case "|":
-				_col = #646464;
+				_col = #323232;
 				continue;
 				break;
 				
 			case "`":
-				_col = #ffdb00;
+				_col = #ffff00;
 				continue;
 				break;
 				
 			case "№":
-				_col = #ea6014;
+				_col = #ff6400;
 				continue;
 				break;
 				
@@ -197,4 +197,12 @@ function scr_number_spr(xx, yy, str, color=c_white, alpha=1)
 		draw_sprite_ext(spr_number, ind, _x - ((string_length(str) - 1) * 2), _y, 1, 1, 0, _col, alpha);
 		_x += 5;
 	}
+}
+
+function scr_text_spr_centered(yy, str, color=c_white, alpha=1)
+{
+    var text_width = scr_text_spr(0, -1000, str, color, alpha);
+    var centered_x = 240 - text_width / 2;
+
+    scr_text_spr(centered_x, yy, str, color, alpha);
 }

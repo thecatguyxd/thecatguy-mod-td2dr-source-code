@@ -62,5 +62,13 @@ function scr_player_slow(time)
 			global.player.alarm[4] = 60 * time;
 			
 			break;
+			
+		case CHARACTER_SCARF:
+			global.player.isSlow = true;
+			global.player.acc = (CREAM_ACC * (100-40)) / 100;
+			global.player.maxHSpeed = (CREAM_MAXSPEED * (100-40)) / 100;
+			global.player.alarm[4] = 60 * time;
+			
+			break;
 	}
 }

@@ -7,13 +7,13 @@
   },
   "bitDepth":1,
   "bitRate":128,
-  "compression":0,
+  "compression":3,
   "conversionMode":0,
   "duration":440.064,
   "name":"mus_genocide_city",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"not in game",
+    "path":"folders/Sounds/Music/not in game.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"mus_genocide_city.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.4,
 }

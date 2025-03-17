@@ -1,17 +1,36 @@
-global.music = -1;
-global.musicGain = 1;
-
 function scr_play_music(bid)
 {
-	if(global.music != -1)
-		scr_stop_music();
-	
-	global.music = audio_play_sound(bid, 0, true);
-	audio_sound_gain(global.music, 1, 0);
+    if (!instance_exists(obj_custom)) return;
+
+    with (obj_custom)
+	{
+        if (!variable_instance_exists(self, "music_instance")) music_instance = -1;
+        
+        if (music_instance != -1)
+		{
+            scr_stop_music();
+        }
+
+        if (music_volume > 0)
+		{
+            music_instance = audio_play_sound(bid, 0, true);
+            audio_sound_gain(music_instance, music_volume, 0);
+        }
+    }
 }
 
 function scr_stop_music()
 {
-	audio_stop_sound(global.music);
-	global.music = -1;
+    if (!instance_exists(obj_custom)) return;
+
+    with (obj_custom)
+	{
+        if (!variable_instance_exists(self, "music_instance")) music_instance = -1;
+
+        if (music_instance != -1)
+		{
+            audio_stop_sound(music_instance);
+            music_instance = -1;
+        }
+    }
 }

@@ -10,18 +10,7 @@ function scr_amy_special()
 			
 		isAttacking = false;
 	}
-	
-	if(isHiding)
-	{
-		if(attackTimer <= -60 * 2)
-			attackTimer = -60 * 2;
-		
-		if(hjumpTimer <= -60 * 2)
-			hjumpTimer = -60 * 2;
-			
-		isAttacking = false;
-	}
-	
+
 	if(global.playerControls && isLookingDown && keyboard_check_pressed(global.KeyA) && hjumpTimer <= 0)
 	{			
 		isGrounded = false;

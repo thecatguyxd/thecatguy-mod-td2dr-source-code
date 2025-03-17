@@ -1,20 +1,4 @@
-global.chatFilter = [
-	"nigger",
-	"nigga",
-	"niggas",
-	"nigg",
-	"faggot",
-	"tranny",
-	"экзюшка",
-	"эгусик",
-	"эггусик",
-	"эмичка",
-	"кримка",
-	"салька",
-	"наксик",
-	"хохол",
-	"москаль"
-];
+global.chatFilter = [];
 
 function scr_chat_filter(str)
 {

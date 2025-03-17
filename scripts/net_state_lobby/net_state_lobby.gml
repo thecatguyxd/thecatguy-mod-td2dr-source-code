@@ -72,7 +72,6 @@ function net_state_lobby(rbuff, nps, isPasstrough)
 			var map = buffer_read_s(rbuff, buffer_u16);
 			lvlId = map;
 			
-			instance_create_depth(0, 0, -100, obj_lobby_white);
 			obj_lobby_waiting.visible = false;
 			
 			with(obj_lobby)

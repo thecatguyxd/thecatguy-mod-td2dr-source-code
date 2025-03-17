@@ -12,8 +12,8 @@
   "duration":198.312,
   "name":"mus_bluespheres",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"not in game",
+    "path":"folders/Sounds/Music/not in game.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

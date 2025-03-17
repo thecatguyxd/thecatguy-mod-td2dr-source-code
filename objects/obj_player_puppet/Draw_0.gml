@@ -109,4 +109,9 @@ switch(character)
 		if(sallyShield)
 			draw_sprite(revivalTimes >= 2 ? spr_sallyshield2 : spr_sallyshield, (current_time / 30) % 41, floor(x), floor(y));
 		break;
+	
+	case CHARACTER_SCARF:
+		if(state == SCARF_ZIPLINE)
+			draw_sprite(spr_aiz_zipline, 0, floor(x) - 12, floor(y) - 8 - 19);
+		break;
 }

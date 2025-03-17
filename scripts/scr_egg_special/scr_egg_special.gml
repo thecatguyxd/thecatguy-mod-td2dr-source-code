@@ -13,21 +13,7 @@ function scr_egg_special()
 			
 		isAttacking = false;
 	}
-	
-	if(isHiding)
-	{
-		if(djumpRecharge <= -60 * 2)
-			djumpRecharge = -60 * 2;
-		
-		if(shieldRechrage >= 0 && shieldRechrage <= -60 * 2)
-			shieldRechrage = -60 * 2;
-			
-		if(trackerRecharge <= -60 * 2)
-			trackerRecharge = -60 * 2;
-			
-		isAttacking = false;
-	}
-	
+
 	if(global.playerControls && keyboard_check_pressed(global.KeyA) && isJumping && djumpRecharge == 0)
 	{
 		isJumping = false;
